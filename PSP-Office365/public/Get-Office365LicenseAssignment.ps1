@@ -30,7 +30,7 @@ function Get-Office365LicenseAssignment {
                     LicenseSku  = $License.AccountSku.SkuPartNumber
                     LicenseName = (Convert-LicenseSku -LicenseSku $License.AccountSku.SkuPartNumber)
                 }
-                if (($null -eq $License.GroupsAssigningLicense) -OR ($UserGuid -eq $License.GroupsAssigningLicense.guid)) {
+                if ((-not($License.GroupsAssigningLicense)) -OR ($UserGuid -eq $License.GroupsAssigningLicense.guid)) {
                     $UserLicense | Add-Member -MemberType NoteProperty -Name 'DirectAssigned' -Value $true
                     $UserLicense | Add-Member -MemberType NoteProperty -Name 'GroupAssigned' -Value $false
                     $UserLicense | Add-Member -MemberType NoteProperty -Name 'AssignedBy' -Value ''
