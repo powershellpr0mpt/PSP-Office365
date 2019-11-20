@@ -6,7 +6,7 @@
 
         Name: PSP-Office365
         Author: Robert Prust
-        Version: 0.1.0
+        Version: 0.2.0
         Blog: http://powershellpr0mpt.com
 
     .LINK

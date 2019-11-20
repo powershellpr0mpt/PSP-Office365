@@ -12,7 +12,7 @@
     RootModule        = 'PSP-Office365.psm1'
 
     # Version number of this module.
-    ModuleVersion     = '0.1.0'
+    ModuleVersion     = '0.2.0'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()
@@ -24,7 +24,7 @@
     Author            = 'Robert Prust'
 
     # Company or vendor of this module
-    CompanyName       = 'Unknown'
+    CompanyName       = 'powershellpr0mpt.com'
 
     # Copyright statement for this module
     Copyright         = '(c) 2019 Robert Prust. All rights reserved.'

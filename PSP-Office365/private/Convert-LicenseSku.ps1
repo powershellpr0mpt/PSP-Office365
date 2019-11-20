@@ -85,5 +85,7 @@ function Convert-LicenseSku {
         IDENTITY_THREAT_PROTECTION { "IDENTITY AND THREAT PROTECTION" }
         FLOW_FREE { "MICROSOFT FLOW FREE" }
         POWERAPPS_VIRAL { "Microsoft Power Apps & Flow" }
+        RMSBASIC { "RMS BASIC"}
+        STREAM { "MICROSOFT STREAM"}
     }
 }
