@@ -87,5 +87,6 @@ function Convert-LicenseSku {
         POWERAPPS_VIRAL { "Microsoft Power Apps & Flow" }
         RMSBASIC { "RMS BASIC"}
         STREAM { "MICROSOFT STREAM"}
+        WINDOWS_STORE { "WINDOWS STORE FOR BUSINESS"}
     }
 }
