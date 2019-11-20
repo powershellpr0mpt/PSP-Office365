@@ -38,7 +38,10 @@ function Get-Office365LicenseAssignment {
                 else {
                     $UserLicense | Add-Member -MemberType NoteProperty -Name 'DirectAssigned' -Value $false
                     $UserLicense | Add-Member -MemberType NoteProperty -Name 'GroupAssigned' -Value $true
-                    $UserLicense | Add-Member -MemberType NoteProperty -Name 'AssignedBy' -Value (($Groups.Where{ $_.ObjectId -eq $License.GroupsAssigningLicense.guid }).DisplayName)
+                    $LicenseGroups = foreach ($LicenseGroup in $License.GroupsAssigningLicense){
+                        ($Groups.Where{ $_.ObjectId -eq $LicenseGroup.guid }).DisplayName
+                    }
+                    $UserLicense | Add-Member -MemberType NoteProperty -Name 'AssignedBy' -Value ($LicenseGroups -join ';')
                 }
                 $UserLicense
             }
